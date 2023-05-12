@@ -6,11 +6,12 @@
 def create_phone_number(num_tuple):
     """
     Функция принимает кортеж из 10 цифр и возвращает строку в виде номера телефона
-    :param num_tuple:
-    :return:
+    :param num_tuple: tuple Кортеж из 10 цифр
+    :return: (str_phone) str Строка в формате номера телефона
     """
-    str_phone = f'({num_tuple[0]}{num_tuple[1]}{num_tuple[2]}) {num_tuple[3]}{num_tuple[4]}{num_tuple[5]}' \
-                f'-{num_tuple[6]}{num_tuple[7]}{num_tuple[8]}{num_tuple[9]}'
+    str_phone = f'({"".join(map(str, num_tuple[0:3]))}) ' \
+                f'{"".join(map(str, num_tuple[3:6]))}-{"".join(map(str, num_tuple[6:10]))}'
+    print(str_phone)
     return str_phone
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
