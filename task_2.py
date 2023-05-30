@@ -36,7 +36,7 @@ class PersonInfo:
         """
         self.name = name
         self.age = age
-        self.subdivisions = [*subdivisions]
+        self.subdivisions = subdivisions
 
     def short_name(self):
         """
@@ -51,11 +51,7 @@ class PersonInfo:
         Метод возвращает подразделения в формате строки с разделителем -->
         :return: str Подразделения одной строкой
         """
-        path = self.subdivisions[0]
-        it = 1
-        while it < len(self.subdivisions):
-            path = f'{path} --> {self.subdivisions[it]}'
-            it += 1
+        path = ' --> '.join(self.subdivisions)
         return path
 
     def new_salary(self):

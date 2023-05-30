@@ -36,7 +36,7 @@ class Segment:
         Метод возвращает True, если отрезок пересекает ось x, и False = если нет
         :return: bool
         """
-        if (self.tuple1[1] <= 0) and (self.tuple2[1] >= 0):
+        if self.tuple1[1] * self.tuple2[1] < 0:
             return True
         else:
             return False
@@ -46,7 +46,7 @@ class Segment:
         Метод возвращает True, если отрезок пересекает ось y, и False = если нет
         :return: bool
         """
-        if (self.tuple1[0] <= 0) and (self.tuple2[0] >= 0):
+        if self.tuple1[0] * self.tuple2[0] < 0:
             return True
         else:
             return False
